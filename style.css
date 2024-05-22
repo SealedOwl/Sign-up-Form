@@ -72,3 +72,30 @@
     height: 100vh;
 
 }
+
+.info-section{
+    height: 34%;
+    background-color: hsla(0,0%,96%,.8);
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-size: 1.8rem;
+    font-weight: 600;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.info{
+    width: 65%;
+    margin-left: -25%;
+}
+
+.form-section{  
+    height: 36%;
+    background-color: red;
+}
+
+.create-account-section{
+    height: 30%;
+    background-color: blueviolet;
+
+}
