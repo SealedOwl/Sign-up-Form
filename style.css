@@ -190,6 +190,21 @@ input#password + span::before {
   }
 
 
+form input:focus{
+    outline: none;
+    border: 1px solid blue;
+    box-shadow: 2px 2px 3px #ccc;
+}
+
+form input[type="password"]:invalid{
+    border: 1px solid red;
+}
+
+input#confirm-password.invalid +span::before{
+    color: red;
+    content: "Password do not match";
+}
+
 /* button container */
 
 .create-account-section{
