@@ -116,6 +116,7 @@ textarea {
 form{
     width: 800px;
     margin: 30px 20px 20px 60px;
+    
 }
 
 
@@ -123,7 +124,7 @@ form{
 
 form > div{
     display: inline-block;
-    margin-bottom: 25px;
+    margin-bottom: 40px;
     margin-right: 60px;
 }
 
@@ -133,6 +134,7 @@ form > div{
     font-weight: 700;
     margin: 40px 10px 10px 60px;
 }
+
 
 /* form styling */
 
@@ -152,8 +154,83 @@ form input{
     font-family: 'Times New Roman', Times, serif;
 }
 
+/* input field spans */
+
+input#email + span,
+input#phone-number + span,
+input#password + span,
+input#confirm-password + span{
+    position: relative;
+    display: block;
+}
+
+input#email + span::before,
+input#phone-number + span::before,
+input#password + span::before,
+input#confirm-password + span::before{
+    position: absolute;
+    font-size: 0.9rem;
+    color: rgb(94,94,94);
+    padding: 5px 10px;
+    bottom: -23px;
+    left: -8px;
+}
+
+input#email + span::before{
+    content: "(Ex: username@domain.com)";
+}
+
+input#phone-number + span::before{
+    content: "(Ex: 1234567892)";
+}
+
+input#password + span::before {
+    bottom: -40px;
+    content: "Must contain at least 8 characters, 1 uppercase letter, 1 lowercase and 1 digit.";
+  }
+
+
+/* button container */
+
 .create-account-section{
     height: 30%;
-    background-color: blueviolet;
+    background-color: hsla(0,0%,96%,.8);;
+    
+}
 
+.btn-container{
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    margin: 30px 40px;
+}
+
+
+.submit-btn{
+    background-color: #596D48;
+    color: white;
+    padding: 15px;
+    border-radius: 10px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1.5rem;
+    font-weight: 700;
+    cursor: pointer;
+    border: none;
+}
+
+
+.submit-btn:active{
+    background-color: #35531d;
+}
+
+.btn-container p{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1.4rem;
+    font-weight: 300;
+}
+
+.btn-container a{
+    text-decoration: none;
+    color: #596D48;
+    font-weight: 600;
 }
